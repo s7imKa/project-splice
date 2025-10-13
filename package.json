@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "sass": "^1.93.2"
+  },
+  "name": "project-splice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "sass --style=expanded --watch styles:public",
+    "help": "sass --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s7imKa/project-splice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s7imKa/project-splice/issues"
+  },
+  "homepage": "https://github.com/s7imKa/project-splice#readme",
+  "description": ""
+}
