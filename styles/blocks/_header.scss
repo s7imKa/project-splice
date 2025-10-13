@@ -1,4 +1,9 @@
+@use '../variables' as v;
+
 .header {
+  height: 300px;
+  width: 100%;
+  background-color: v.$color-blue;
 }
 .header__inner {
 }

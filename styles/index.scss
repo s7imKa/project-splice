@@ -1,5 +1,3 @@
-@use 'important' as v;
+@use 'basic';
 
-
-
-
+@use 'blocks/all-blocks' as *;
