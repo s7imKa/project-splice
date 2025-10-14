@@ -9,20 +9,18 @@
 
     &__inner {
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include display-flex(center, space-between);
     }
 
     &__navigation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
+        @include display-flex();
+        gap: 2rem;
 
         & .header__logo {
+            background-color: $color-black;
             width: 9.7rem;
             height: 3rem;
+            z-index: 2;
             &-img {
                 @extend %full-size;
             }
@@ -32,6 +30,10 @@
         &-list {
             @include display-flex();
             gap: 2rem;
+            transition: transform 0.5s ease, opacity 0.5s ease, gap 0.5s ease;
+
+            transform: translateX(0);
+            z-index: 1;
         }
         &-link {
             display: inline-block;
@@ -64,11 +66,40 @@
             background-color: $color-white;
             color: $color-black;
             transition: all 0.5s ease;
+
             &:hover {
                 background-color: $color-blue;
                 color: $color-white;
             }
         }
     }
-}
 
+    @media (max-width: $bp-l-992) {
+        &__nav {
+            &-list {
+                gap: 0.1rem;
+            }
+        }
+
+        &__navigation {
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: $bp-m-768) {
+        &__nav {
+            &-list {
+                /* замість instant display:none — робимо плавне зникнення */
+                transform: translateX(-150%);
+                opacity: 0;
+            }
+        }
+    }
+    @media (max-width: 750px) {
+        &__nav {
+            &-list {
+                display: none;
+            }
+        }
+    }
+}

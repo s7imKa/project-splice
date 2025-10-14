@@ -53,7 +53,8 @@ main {
 }
 
 .container {
-  max-width: 128rem;
+  padding: 0 1rem;
+  max-width: 129rem;
   margin: 0 auto;
 }
 
@@ -80,17 +81,22 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .header__navigation .header__logo {
+  background-color: #121214;
   width: 9.7rem;
   height: 3rem;
+  z-index: 2;
 }
 .header__nav-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  transition: transform 0.5s ease, opacity 0.5s ease, gap 0.5s ease;
+  transform: translateX(0);
+  z-index: 1;
 }
 .header__nav-link {
   display: inline-block;
@@ -126,6 +132,26 @@ main {
 .header__action-sign:hover {
   background-color: #0033ff;
   color: #ffffff;
+}
+@media (max-width: 992px) {
+  .header__nav-list {
+    gap: 0.1rem;
+  }
+  .header__navigation {
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav-list {
+    /* замість instant display:none — робимо плавне зникнення */
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+}
+@media (max-width: 750px) {
+  .header__nav-list {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
