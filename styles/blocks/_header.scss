@@ -1,31 +1,74 @@
-@use '../variables' as v;
+@use '../variables' as *;
+@use '../placeholder' as *;
+@use '../mixin' as *;
 
 .header {
-  height: 300px;
-  width: 100%;
-  background-color: v.$color-blue;
+    height: 7rem;
+    width: 100%;
+    background-color: $color-black;
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        & .header__logo {
+            width: 9.7rem;
+            height: 3rem;
+            &-img {
+                @extend %full-size;
+            }
+        }
+    }
+    &__nav {
+        &-list {
+            @include display-flex();
+            gap: 2rem;
+        }
+        &-link {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            font-size: $font-size-base;
+            color: $color-gray;
+            transition: color 0.5s ease;
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__action {
+        @include display-flex();
+        gap: 2rem;
+
+        &-login {
+            color: $color-gray;
+            font-size: $font-size-base;
+            transition: color 0.5s ease;
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        &-sign {
+            font-size: $font-size-base;
+            border-radius: 3.2rem;
+            background-color: $color-white;
+            color: $color-black;
+            transition: all 0.5s ease;
+            &:hover {
+                background-color: $color-blue;
+                color: $color-white;
+            }
+        }
+    }
 }
-.header__inner {
-}
-.container {
-}
-.header__navigation {
-}
-.header__logo {
-}
-.header__logo-img {
-}
-.header__nav {
-}
-.header__nav-list {
-}
-.header__nav-link {
-}
-.header__actions {
-}
-.header__action-login {
-}
-.header__action-sign {
-}
-.btn {
-}
+

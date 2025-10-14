@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+
+.container {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 0.8rem 2rem;
+    background-color: $color-blue;
+    color: rgb(255, 255, 255);
+}

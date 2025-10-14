@@ -1,3 +1,7 @@
 @use 'basic';
+@use 'placeholder';
+@use 'mixin';
+@use 'global';
+
 
 @use 'blocks/all-blocks' as *;
