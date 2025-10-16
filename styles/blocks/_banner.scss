@@ -12,7 +12,7 @@
     &__title {
         display: inline-block;
         color: $color-white;
-        font-size: $font-size-h1;
+        font-size: clamp(1rem, 12vw, 4.8rem);
         max-width: 50rem;
         line-height: $font-size-h1;
         letter-spacing: 0.108rem;
@@ -29,5 +29,19 @@
         border-radius: $radius-8;
         font-size: $font-size-base;
         padding: 1.6rem 3.2rem;
+    }
+
+    @media (max-width: $bp-m-768) {
+        &__content {
+            padding: 0 3rem;
+        }
+    }
+    @media (max-width: $bp-s-576) {
+        height: 64.4rem;
+        &__content {
+            padding: 0 1rem;
+            align-items: center;
+            text-align: center;
+        }
     }
 }

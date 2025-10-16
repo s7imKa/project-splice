@@ -3,3 +3,13 @@
     align-items: $align-items;
     justify-content: $justify-content;
 }
+
+
+// _mixin.scss
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

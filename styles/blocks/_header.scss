@@ -11,6 +11,7 @@
     background-color: $color-black;
 
     &__inner {
+        padding: 0 1rem;
         position: relative; /* щоб внутрішні елементи могли мати вищий z-index */
         z-index: 20;
         height: 100%;
