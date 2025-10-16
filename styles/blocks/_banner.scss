@@ -1,0 +1,33 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.banner {
+    background: $color-black url('../../assets/img/banner.png') center / cover no-repeat;
+    height: 74.4rem;
+    &__content {
+        @include display-flex(start, center);
+        flex-direction: column;
+        height: 100%;
+    }
+    &__title {
+        display: inline-block;
+        color: $color-white;
+        font-size: $font-size-h1;
+        max-width: 50rem;
+        line-height: $font-size-h1;
+        letter-spacing: 0.108rem;
+        padding-bottom: 2rem;
+    }
+    &__description {
+        color: $color-white;
+        font-size: 2rem;
+        padding-bottom: 6rem;
+        max-width: 41.2rem;
+    }
+
+    &__btn {
+        border-radius: $radius-8;
+        font-size: $font-size-base;
+        padding: 1.6rem 3.2rem;
+    }
+}

@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 *,
 *::before,
 *::after {
@@ -16,7 +18,7 @@ html {
 
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    background-color: $color-black;
     color: #111;
     line-height: 1.6;
 }
@@ -29,7 +31,7 @@ h4,
 h5,
 h6 {
     font-weight: 600;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     color: #222;
 }
 
