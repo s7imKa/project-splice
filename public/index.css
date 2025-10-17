@@ -57,6 +57,16 @@ main {
   max-width: 129rem;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 
 .btn {
   display: inline-block;
@@ -335,6 +345,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 .block__info-span {
   color: #a6a8ad;
@@ -363,6 +374,74 @@ main {
 .block__img img {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 992px) {
+  .block__img {
+    width: 100%;
+    height: 30.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .block__info-h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 576px) {
+  .block {
+    padding: 8rem 0;
+  }
+  .block__content {
+    flex-direction: column;
+  }
+  .block__info {
+    text-align: center;
+  }
+  .block__info-p {
+    max-width: 100%;
+  }
+  .block__img {
+    width: 100%;
+    height: 28.6rem;
+  }
+}
+
+.creators {
+  padding: 12rem 0;
+}
+.creators__title {
+  color: #ffffff;
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+.creators__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1rem;
+}
+.creators__cards .card {
+  padding: 3.2rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.creators__cards .card__img {
+  width: 22.3rem;
+  height: 22.3rem;
+  margin-bottom: 3rem;
+  border-radius: 50%;
+}
+.creators__cards .card__title {
+  text-align: start;
+  color: #121214;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+.creators__cards .card__avtor {
+  display: block;
+  text-align: left;
+  color: #a6a8ad;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=index.css.map */
