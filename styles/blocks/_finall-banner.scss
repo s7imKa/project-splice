@@ -1,0 +1,30 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.finall-banner {
+    height: 72.8rem;
+    width: 100%;
+    background: url(/assets/img/finalbanner.jpg) center / cover;
+
+    &__content {
+        @include display-flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 5.4rem;
+        font-weight: 500;
+        margin-bottom: 6.5rem;
+    }
+
+    &__btn {
+        color: $color-white;
+        font-size: $font-size-base;
+        border-radius: $radius-8;
+        padding: 0.8rem 2rem;
+
+    }
+}
