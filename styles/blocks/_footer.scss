@@ -1,0 +1,65 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.footer {
+    width: 100%;
+    &__wrapp {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .links {
+        margin-bottom: 5rem;
+        &__nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+            gap: 2rem;
+        }
+
+        &__ul {
+            @include display-flex(start, start);
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__li {
+            list-style: none;
+        }
+        &__a {
+            color: $color-gray;
+            font-size: 1.2rem;
+            @include hover {
+                color: $color-white;
+            }
+        }
+        &__title {
+            color: $color-white;
+            font-size: 2rem;
+        }
+    }
+}
+
+.navigate__ul {
+    @include display-flex(center, start);
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.navigate__li {
+    list-style-type: none;
+}
+.navigate__li img {
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 0.2rem;
+}
+.navigate__p {
+    color: $color-gray;
+}
+.navigate__link {
+    color: $color-gray;
+}
+
+.m-b1rem {
+    display: block;
+    margin-bottom: 1rem;
+}
